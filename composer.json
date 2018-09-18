@@ -1,0 +1,27 @@
+{
+  "name": "interact/sms-client",
+  "description": "SMS Client",
+  "authors": [
+    {
+      "name": "Interact S.A.",
+      "email": "info@interact.lu",
+      "homepage": "http://www.interact.lu"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "no-api": true,
+      "url": "git@github.com:InteractAgency/sms-client.git"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "SMSClient\\": "src/"
+    }
+  }
+}
