@@ -8,6 +8,7 @@ Provide websms.lu implementation
 ## Use case
 
 Init Client
+    
     use SMSClient\Client\Client;
 
     $client = new Client('your_login', 'your_password');
