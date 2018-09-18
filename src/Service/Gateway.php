@@ -16,7 +16,7 @@ class Gateway {
 	/**
 	 * string API URL
 	 */
-	const API_URL = '';
+	const API_URL = 'https://www.websms.lu/api/send';
 
 	/**
 	 * boolean SSL VERIFY
