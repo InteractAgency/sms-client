@@ -30,11 +30,9 @@ class Gateway {
 	 */
 	public function call(array $data)
 	{
-		$post = '';
-
-		foreach ($data as $k => $v) {
-			$post .= "&$k=$v";
-		}
+		$post = implode('', array_map(function ($value, $key) {
+			return sprintf("&%s=%s", $key, $value);
+	    	} , $data, array_keys($data)));
 
 		// If available, use CURL
 		if (function_exists('curl_version')) {
@@ -49,7 +47,7 @@ class Gateway {
 
 			$result = curl_exec($ch);
 			curl_close($ch);
-		} elseif (ini_get('allow_url_fopen')) {
+		} else if (ini_get('allow_url_fopen')) {
 			// No CURL available so try to file_get_contents
 			$options = [
 				'http' => [
