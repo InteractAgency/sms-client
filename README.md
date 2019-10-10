@@ -3,7 +3,7 @@ Provide websms.lu implementation
 
 ## Install
 
-    composer require interact/sms-client
+    composer require interact-agency/sms-client
     
 ## Use case
 
